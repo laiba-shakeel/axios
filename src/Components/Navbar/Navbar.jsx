@@ -1,6 +1,17 @@
-import React from 'react';
-
+import React from "react";
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
+  const navigation = useNavigate("");
+
+  const handleManScreenNav = () => {
+    navigation("men");
+  };
+  const handleWomenScreenNav = () => {
+    navigation("women");
+  };
+  const handleAcessoriesScreenNav = () => {
+    navigation("accessories");
+  };
   return (
     <nav className="bg-gray-800 text-white p-4 fixed top-0 w-full z-10">
       <div className="container mx-auto flex items-center justify-between">
@@ -11,9 +22,24 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <div className="space-x-4">
-          <a href="/categories" className="hover:text-gray-300">Men</a>
-          <a href="/login" className="hover:text-gray-300">Women</a>
-          <a href="/signup" className="hover:text-gray-300">Accessories</a>
+          <a
+            style={{ cursor: "pointer" }}
+            onClick={handleManScreenNav}
+            className="hover:text-gray-300">
+            Men
+          </a>
+          <a
+            style={{ cursor: "pointer" }}
+            onClick={handleWomenScreenNav}
+            className="hover:text-gray-300">
+            Women
+          </a>
+          <a
+            style={{ cursor: "pointer" }}
+            onClick={handleAcessoriesScreenNav}
+            className="hover:text-gray-300">
+            Accessories
+          </a>
         </div>
 
         {/* Search Bar */}

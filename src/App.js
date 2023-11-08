@@ -1,9 +1,11 @@
-import CardsScreen from './screen/CardsScreen'
+import CardsScreen from "./screen/CardsScreen";
+import Navigation from "./Routes";
+
 function App() {
   return (
-    <div>
-      <CardsScreen />
-    </div>
+    <>
+      <Navigation />
+    </>
   );
 }
 
